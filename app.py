@@ -42,8 +42,15 @@ def load_vision_model():
     return MobileNetV2(weights='imagenet')
 
 CAR_KEYWORDS = ['car', 'convertible', 'jeep', 'limousine', 'minivan', 'pickup',
-                'sports_car', 'cab', 'beach_wagon', 'racer', 'wagon', 'truck',
-                'van', 'vehicle', 'wheel', 'tire', 'motor_scooter']
+                'sports_car', 'beach_wagon', 'racer', 'station_wagon',
+                'model_t', 'amphibian']
+
+def is_car_match(label):
+    label = label.lower()
+    return any(
+        kw == label or label.startswith(kw + '_') or label.endswith('_' + kw)
+        for kw in CAR_KEYWORDS
+    )
 
 def check_is_car(uploaded_image):
     vision_model = load_vision_model()
@@ -55,7 +62,10 @@ def check_is_car(uploaded_image):
     preds = vision_model.predict(img_array, verbose=0)
     decoded = decode_predictions(preds, top=5)[0]
 
-    is_car = any(any(kw in label.lower() for kw in CAR_KEYWORDS) for (_, label, _) in decoded)
+    is_car = any(
+        is_car_match(label) and confidence > 0.15
+        for (_, label, confidence) in decoded
+    )
     top_label = decoded[0][1].replace('_', ' ').title()
     top_confidence = decoded[0][2] * 100
 
