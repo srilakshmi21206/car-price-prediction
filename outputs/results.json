@@ -1,0 +1,119 @@
+{
+    "selected_features": [
+        "Present_Price",
+        "Fuel_Type",
+        "Transmission",
+        "Car_Age"
+    ],
+    "best_r2_cv": 0.9128087765966111,
+    "test_mae": 0.5373932662361958,
+    "test_r2": 0.9655898029954499,
+    "convergence_history": [
+        {
+            "generation": 1,
+            "best_r2": 0.9120863091616291,
+            "overall_best_r2": 0.9120863091616291
+        },
+        {
+            "generation": 2,
+            "best_r2": 0.9120863091616291,
+            "overall_best_r2": 0.9120863091616291
+        },
+        {
+            "generation": 3,
+            "best_r2": 0.9120863091616291,
+            "overall_best_r2": 0.9120863091616291
+        },
+        {
+            "generation": 4,
+            "best_r2": 0.9120863091616291,
+            "overall_best_r2": 0.9120863091616291
+        },
+        {
+            "generation": 5,
+            "best_r2": 0.9120863091616291,
+            "overall_best_r2": 0.9120863091616291
+        },
+        {
+            "generation": 6,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 7,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 8,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 9,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 10,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 11,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 12,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 13,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 14,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 15,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 16,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 17,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 18,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 19,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        },
+        {
+            "generation": 20,
+            "best_r2": 0.9128087765966111,
+            "overall_best_r2": 0.9128087765966111
+        }
+    ],
+    "feature_importance": {
+        "Present_Price": 0.8051517605781555,
+        "Fuel_Type": 0.02154061757028103,
+        "Transmission": 0.009270692244172096,
+        "Car_Age": 0.16403694450855255
+    }
+}
