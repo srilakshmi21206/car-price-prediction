@@ -1,6 +1,9 @@
 # Car Valuation Engine
-
 GA-optimized XGBoost model for used car price prediction.
+
+![Python](https://img.shields.io/badge/python-3.10-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![NIC](https://img.shields.io/badge/NIC-29101-orange)
 
 **NIC 29101 — Automotive Engineering**
 
