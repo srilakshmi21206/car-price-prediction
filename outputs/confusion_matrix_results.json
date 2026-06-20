@@ -1,0 +1,18 @@
+{
+    "confusion_matrix": [
+        [
+            18,
+            0
+        ],
+        [
+            0,
+            14
+        ]
+    ],
+    "labels": [
+        "Not Car",
+        "Car"
+    ],
+    "total_images": 32,
+    "accuracy": 1.0
+}

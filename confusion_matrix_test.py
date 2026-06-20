@@ -71,6 +71,19 @@ print(cm)
 
 print("\nClassification Report:")
 print(classification_report(y_true, y_pred, target_names=["Not Car", "Car"]))
+import json
+
+cm_results = {
+    "confusion_matrix": cm.tolist(),
+    "labels": ["Not Car", "Car"],
+    "total_images": len(y_true),
+    "accuracy": float((cm[0][0] + cm[1][1]) / cm.sum())
+}
+
+with open("outputs/confusion_matrix_results.json", "w") as f:
+    json.dump(cm_results, f, indent=4)
+
+print("\nConfusion matrix data saved to outputs/confusion_matrix_results.json")
 
 plt.figure(figsize=(6, 5))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',

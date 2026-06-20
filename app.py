@@ -283,7 +283,34 @@ with tab2:
         st.subheader("✅ Features Selected by Genetic Algorithm")
         for i, feat in enumerate(results['selected_features'], 1):
             st.write(f"**{i}.** {feat}")
+        st.markdown("---")
+        st.subheader("🖼️ Image Verification Model — Evaluation")
+        st.caption("Separate evaluation for the MobileNetV2-based car image classifier (classification task, not regression).")
 
+        try:
+            with open("outputs/confusion_matrix_results.json") as f:
+                cm_data = json.load(f)
+
+            cm_array = np.array(cm_data["confusion_matrix"])
+            labels = cm_data["labels"]
+
+            fig_cm = go.Figure(data=go.Heatmap(
+                z=cm_array,
+                x=[f"Predicted: {l}" for l in labels],
+                y=[f"Actual: {l}" for l in labels],
+                text=cm_array,
+                texttemplate="%{text}",
+                colorscale="Blues",
+                showscale=True
+            ))
+            fig_cm.update_layout(
+                title=f"Confusion Matrix — Image Verification ({cm_data['total_images']} test images)",
+                yaxis_autorange='reversed'
+            )
+            st.plotly_chart(fig_cm, use_container_width=True)
+            st.metric("Image Verification Accuracy", f"{cm_data['accuracy']*100:.1f}%")
+        except FileNotFoundError:
+            st.caption("Run confusion_matrix_test.py to generate this evaluation.")
         st.markdown("---")
         st.subheader("🎯 Feature Importance (XGBoost)")
 
