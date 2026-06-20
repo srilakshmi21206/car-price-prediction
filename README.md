@@ -61,6 +61,20 @@ Used car pricing is typically estimated manually by sellers or dealers, often in
 The GA converged quickly and stably, indicating the selected feature subset is a genuine optimum for this dataset rather than a noisy artifact.
 
 ---
+---
+
+## Image verification evaluation
+
+The MobileNetV2-based image verification step was evaluated separately, since it is a classification task (car / not car) rather than regression. Tested on 32 images (18 non-car, 14 car):
+
+| Metric | Value |
+|---|---|
+| Accuracy | 100% |
+| Precision | 1.00 |
+| Recall | 1.00 |
+| F1 Score | 1.00 |
+
+This evaluation uses a confusion matrix rather than R²/MAE, since it is a binary classification problem, not a continuous-value prediction problem.
 
 ## Application
 
