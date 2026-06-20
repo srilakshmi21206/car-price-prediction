@@ -98,38 +98,23 @@ A Streamlit dashboard with three views:
 ---
 
 ## Project structure
----
+```
 car-price-prediction/
-
 ├── data/
-
 │   └── car data.csv
-
 ├── models/
-
 │   ├── car_price_model.pkl
-
 │   ├── selected_features.pkl
-
 │   └── all_features.pkl
-
 ├── outputs/
-
 │   ├── results.json
-
 │   └── confusion_matrix_results.json
-
 ├── train_model.py
-
 ├── app.py
-
 ├── confusion_matrix_test.py
-
 ├── requirements.txt
-
 └── README.md
-
----
+```
 
 ## How to run
 
