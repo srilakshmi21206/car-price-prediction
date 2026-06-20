@@ -7,7 +7,6 @@ GA-optimized XGBoost model for used car price prediction.
 
 **NIC 29101 — Automotive Engineering**
 
-
 ---
 
 ## Overview
@@ -61,7 +60,6 @@ Used car pricing is typically estimated manually by sellers or dealers, often in
 The GA converged quickly and stably, indicating the selected feature subset is a genuine optimum for this dataset rather than a noisy artifact.
 
 ---
----
 
 ## Image verification evaluation
 
@@ -76,12 +74,14 @@ The MobileNetV2-based image verification step was evaluated separately, since it
 
 This evaluation uses a confusion matrix rather than R²/MAE, since it is a binary classification problem, not a continuous-value prediction problem.
 
+---
+
 ## Application
 
 A Streamlit dashboard with three views:
 
 - **Predict price** — input car specifications and an image; returns a predicted selling price with a price range and a table of similar cars from the dataset
-- **Model performance** — test metrics, GA convergence plot, selected features, feature importance
+- **Model performance** — test metrics, GA convergence plot, selected features, feature importance, image verification confusion matrix
 - **Data insights** — dataset distributions and relationships
 
 ---
@@ -98,22 +98,36 @@ A Streamlit dashboard with three views:
 ---
 
 ## Project structure
-
-```
+---
 car-price-prediction/
+
 ├── data/
+
 │   └── car data.csv
+
 ├── models/
+
 │   ├── car_price_model.pkl
+
 │   ├── selected_features.pkl
+
 │   └── all_features.pkl
+
 ├── outputs/
-│   └── results.json
+
+│   ├── results.json
+
+│   └── confusion_matrix_results.json
+
 ├── train_model.py
+
 ├── app.py
+
+├── confusion_matrix_test.py
+
 ├── requirements.txt
+
 └── README.md
-```
 
 ---
 
